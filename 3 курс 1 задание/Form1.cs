@@ -19,7 +19,7 @@ namespace _3_курс_1_задание
 
         private void Add_B_Click(object sender, EventArgs e)
         {
-
+            Console.WriteLine("Hello world");
         }
 
         private void Change_B_Click(object sender, EventArgs e)
