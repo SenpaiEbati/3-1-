@@ -108,9 +108,10 @@
             // MatrSum_TB
             // 
             this.MatrSum_TB.Location = new System.Drawing.Point(304, 133);
+            this.MatrSum_TB.Multiline = true;
             this.MatrSum_TB.Name = "MatrSum_TB";
             this.MatrSum_TB.ReadOnly = true;
-            this.MatrSum_TB.Size = new System.Drawing.Size(250, 20);
+            this.MatrSum_TB.Size = new System.Drawing.Size(250, 149);
             this.MatrSum_TB.TabIndex = 7;
             // 
             // MatrSum_L

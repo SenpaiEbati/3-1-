@@ -103,9 +103,39 @@ namespace _3_курс_1_задание
 
         private void MatrSum_B_Click(object sender, EventArgs e)
         {
-            if (ListMatr_LB.Items.Count > 0)
-            {
-                int IndexMatr = 0 
+            if (ListMatr_LB.Items.Count > 0) {
+                for (int i = 0; i < ListMatr_LB.Items.Count; i++) {
+                    Storage Temp_i = ListMatr_LB.Items[i] as Storage;
+                    double sum_a = 0.0;
+                    double sum_b = 0.0;
+
+                    for (int j = 0; j < Temp_i.Size; j++) {
+                        sum_a += Temp_i[0, j];
+                        sum_b += Temp_i[Temp_i.Size - 1, j];
+                    }
+                    Console.WriteLine(sum_a + " - " + sum_b + " - " + (sum_a-sum_b));
+                    if ((sum_a - sum_b) < 0.00000000001)
+                    {
+                        if (MatrSum_TB.Text.Length == 0 || MatrSum_TB.Text == "Нет матриц удовлетворяющие условию")
+                        {
+                            MatrSum_TB.Clear();
+                            MatrSum_TB.Text = "Матрица №" + Temp_i.ID + " " + sum_a;
+                        }
+
+                        else
+                        {
+                            MatrSum_TB.Clear();
+                            MatrSum_TB.Text = "\nМатрица №" + Temp_i.ID + " " + sum_a;
+                        }
+                            
+                    }
+                    else
+                    {
+                        MatrSum_TB.Clear();
+                        MatrSum_TB.Text = "Нет матриц удовлетворяющие условию";
+                    }
+                        
+                }
             }
             else
                 MessageBox.Show( "Не введены данные хотя бы по одному складу", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
