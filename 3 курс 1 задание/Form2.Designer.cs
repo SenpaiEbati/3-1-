@@ -97,6 +97,7 @@
             0,
             0,
             0});
+            this.Count_NUD.ValueChanged += new System.EventHandler(this.Count_NUD_ValueChanged);
             // 
             // Matr_DGV
             // 
@@ -124,6 +125,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Dialog_F";
             this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dialog_F_FormClosing);
+            this.Load += new System.EventHandler(this.Dialog_F_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Count_NUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Matr_DGV)).EndInit();
             this.ResumeLayout(false);

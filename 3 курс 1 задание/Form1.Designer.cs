@@ -33,8 +33,8 @@
             this.Add_B = new System.Windows.Forms.Button();
             this.Change_B = new System.Windows.Forms.Button();
             this.Del_B = new System.Windows.Forms.Button();
-            this.DiffSum_L = new System.Windows.Forms.Label();
-            this.DiffSum_TB = new System.Windows.Forms.TextBox();
+            this.DiffInAmounts_L = new System.Windows.Forms.Label();
+            this.DiffInAmounts_TB = new System.Windows.Forms.TextBox();
             this.MatrSum_TB = new System.Windows.Forms.TextBox();
             this.MatrSum_L = new System.Windows.Forms.Label();
             this.MatrSum_B = new System.Windows.Forms.Button();
@@ -47,6 +47,7 @@
             this.ListMatr_LB.Name = "ListMatr_LB";
             this.ListMatr_LB.Size = new System.Drawing.Size(274, 225);
             this.ListMatr_LB.TabIndex = 0;
+            this.ListMatr_LB.SelectedIndexChanged += new System.EventHandler(this.ListMatr_LB_SelectedIndexChanged);
             // 
             // ListMatr_L
             // 
@@ -87,22 +88,22 @@
             this.Del_B.UseVisualStyleBackColor = true;
             this.Del_B.Click += new System.EventHandler(this.Del_B_Click);
             // 
-            // DiffSum_L
+            // DiffInAmounts_L
             // 
-            this.DiffSum_L.AutoSize = true;
-            this.DiffSum_L.Location = new System.Drawing.Point(301, 28);
-            this.DiffSum_L.Name = "DiffSum_L";
-            this.DiffSum_L.Size = new System.Drawing.Size(169, 26);
-            this.DiffSum_L.TabIndex = 5;
-            this.DiffSum_L.Text = "&Разность сумм элементов \r\nглавной и побочной диагоналей";
+            this.DiffInAmounts_L.AutoSize = true;
+            this.DiffInAmounts_L.Location = new System.Drawing.Point(301, 28);
+            this.DiffInAmounts_L.Name = "DiffInAmounts_L";
+            this.DiffInAmounts_L.Size = new System.Drawing.Size(169, 26);
+            this.DiffInAmounts_L.TabIndex = 5;
+            this.DiffInAmounts_L.Text = "&Разность сумм элементов \r\nглавной и побочной диагоналей";
             // 
-            // DiffSum_TB
+            // DiffInAmounts_TB
             // 
-            this.DiffSum_TB.Location = new System.Drawing.Point(479, 34);
-            this.DiffSum_TB.Name = "DiffSum_TB";
-            this.DiffSum_TB.ReadOnly = true;
-            this.DiffSum_TB.Size = new System.Drawing.Size(75, 20);
-            this.DiffSum_TB.TabIndex = 6;
+            this.DiffInAmounts_TB.Location = new System.Drawing.Point(479, 34);
+            this.DiffInAmounts_TB.Name = "DiffInAmounts_TB";
+            this.DiffInAmounts_TB.ReadOnly = true;
+            this.DiffInAmounts_TB.Size = new System.Drawing.Size(75, 20);
+            this.DiffInAmounts_TB.TabIndex = 6;
             // 
             // MatrSum_TB
             // 
@@ -129,6 +130,7 @@
             this.MatrSum_B.TabIndex = 9;
             this.MatrSum_B.Text = "&Найти";
             this.MatrSum_B.UseVisualStyleBackColor = true;
+            this.MatrSum_B.Click += new System.EventHandler(this.MatrSum_B_Click);
             // 
             // Main_F
             // 
@@ -138,8 +140,8 @@
             this.Controls.Add(this.MatrSum_B);
             this.Controls.Add(this.MatrSum_L);
             this.Controls.Add(this.MatrSum_TB);
-            this.Controls.Add(this.DiffSum_TB);
-            this.Controls.Add(this.DiffSum_L);
+            this.Controls.Add(this.DiffInAmounts_TB);
+            this.Controls.Add(this.DiffInAmounts_L);
             this.Controls.Add(this.Del_B);
             this.Controls.Add(this.Change_B);
             this.Controls.Add(this.Add_B);
@@ -147,6 +149,7 @@
             this.Controls.Add(this.ListMatr_LB);
             this.Name = "Main_F";
             this.Text = "Работа с основными элементами класса";
+            this.Load += new System.EventHandler(this.Main_F_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,8 +162,8 @@
         private System.Windows.Forms.Button Add_B;
         private System.Windows.Forms.Button Change_B;
         private System.Windows.Forms.Button Del_B;
-        private System.Windows.Forms.Label DiffSum_L;
-        private System.Windows.Forms.TextBox DiffSum_TB;
+        private System.Windows.Forms.Label DiffInAmounts_L;
+        private System.Windows.Forms.TextBox DiffInAmounts_TB;
         private System.Windows.Forms.TextBox MatrSum_TB;
         private System.Windows.Forms.Label MatrSum_L;
         private System.Windows.Forms.Button MatrSum_B;
