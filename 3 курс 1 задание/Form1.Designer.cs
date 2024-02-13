@@ -46,7 +46,7 @@
             this.ListMatr_LB.Location = new System.Drawing.Point(11, 28);
             this.ListMatr_LB.Name = "ListMatr_LB";
             this.ListMatr_LB.Size = new System.Drawing.Size(274, 225);
-            this.ListMatr_LB.TabIndex = 0;
+            this.ListMatr_LB.TabIndex = 1;
             this.ListMatr_LB.SelectedIndexChanged += new System.EventHandler(this.ListMatr_LB_SelectedIndexChanged);
             // 
             // ListMatr_L
@@ -55,7 +55,7 @@
             this.ListMatr_L.Location = new System.Drawing.Point(12, 9);
             this.ListMatr_L.Name = "ListMatr_L";
             this.ListMatr_L.Size = new System.Drawing.Size(84, 13);
-            this.ListMatr_L.TabIndex = 1;
+            this.ListMatr_L.TabIndex = 0;
             this.ListMatr_L.Text = "Список &матриц";
             // 
             // Add_B
@@ -113,7 +113,7 @@
             this.MatrSum_TB.ReadOnly = true;
             this.MatrSum_TB.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.MatrSum_TB.Size = new System.Drawing.Size(250, 149);
-            this.MatrSum_TB.TabIndex = 7;
+            this.MatrSum_TB.TabIndex = 9;
             // 
             // MatrSum_L
             // 
@@ -121,7 +121,7 @@
             this.MatrSum_L.Location = new System.Drawing.Point(301, 88);
             this.MatrSum_L.Name = "MatrSum_L";
             this.MatrSum_L.Size = new System.Drawing.Size(168, 39);
-            this.MatrSum_L.TabIndex = 8;
+            this.MatrSum_L.TabIndex = 7;
             this.MatrSum_L.Text = "Матрицы, имеющие \r\nодинаковые &суммы элементов \r\nпервой и последней строк";
             // 
             // MatrSum_B
@@ -129,7 +129,7 @@
             this.MatrSum_B.Location = new System.Drawing.Point(479, 104);
             this.MatrSum_B.Name = "MatrSum_B";
             this.MatrSum_B.Size = new System.Drawing.Size(75, 23);
-            this.MatrSum_B.TabIndex = 9;
+            this.MatrSum_B.TabIndex = 8;
             this.MatrSum_B.Text = "&Найти";
             this.MatrSum_B.UseVisualStyleBackColor = true;
             this.MatrSum_B.Click += new System.EventHandler(this.MatrSum_B_Click);

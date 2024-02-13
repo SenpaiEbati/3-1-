@@ -24,7 +24,7 @@ namespace _3_курс_1_задание
 
         public Storage() : this(2) { } // Конструктор без параметров
 
-        public override string ToString() // Метод отображающий номер и сумму др.ч. в Main_F в ListBox
+        public override string ToString() // Перегрузка метода ToString() для обеспечения правильного отображения экземпляров класса в визуальных компонентах
         {
             string s = "Матрица №" + _ID + ":"; // Номер Матрицы
             double sum = 0.0;
@@ -52,10 +52,6 @@ namespace _3_курс_1_задание
                 if ((Index_i >= 2 && Index_i < _Matr.GetLength(0)) && (Index_j >= 2 && Index_j < _Matr.GetLength(1)))
                     if (value > 0)
                         _Matr[Index_i, Index_j] = value;
-                    else
-                        throw new Exception("Неправильное значение элемента " +
-                                    "[" + (Index_i + 1) + "," + (Index_j + 1) + "] матрицы. " +
-                                    "Элементы матрицы должны быть больше 0");
                 else
                     throw new Exception("Неправильно задан/-ы индекс/-а матрицы: " + Index_i + " " + Index_j);
             }

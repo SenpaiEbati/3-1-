@@ -44,7 +44,7 @@
             this.Ok_B.Location = new System.Drawing.Point(345, 8);
             this.Ok_B.Name = "Ok_B";
             this.Ok_B.Size = new System.Drawing.Size(75, 23);
-            this.Ok_B.TabIndex = 0;
+            this.Ok_B.TabIndex = 4;
             this.Ok_B.Text = "OK";
             this.Ok_B.UseVisualStyleBackColor = true;
             // 
@@ -54,7 +54,7 @@
             this.Cancel_B.Location = new System.Drawing.Point(345, 49);
             this.Cancel_B.Name = "Cancel_B";
             this.Cancel_B.Size = new System.Drawing.Size(75, 23);
-            this.Cancel_B.TabIndex = 1;
+            this.Cancel_B.TabIndex = 5;
             this.Cancel_B.Text = "Отмена";
             this.Cancel_B.UseVisualStyleBackColor = true;
             // 
@@ -64,8 +64,8 @@
             this.Count_L.Location = new System.Drawing.Point(13, 13);
             this.Count_L.Name = "Count_L";
             this.Count_L.Size = new System.Drawing.Size(156, 13);
-            this.Count_L.TabIndex = 2;
-            this.Count_L.Text = "Размер квадратной матрицы";
+            this.Count_L.TabIndex = 0;
+            this.Count_L.Text = "&Размер квадратной матрицы";
             // 
             // Matr_L
             // 
@@ -73,8 +73,8 @@
             this.Matr_L.Location = new System.Drawing.Point(13, 62);
             this.Matr_L.Name = "Matr_L";
             this.Matr_L.Size = new System.Drawing.Size(51, 13);
-            this.Matr_L.TabIndex = 3;
-            this.Matr_L.Text = "Матрица";
+            this.Matr_L.TabIndex = 2;
+            this.Matr_L.Text = "&Матрица";
             // 
             // Count_NUD
             // 
@@ -91,7 +91,7 @@
             0});
             this.Count_NUD.Name = "Count_NUD";
             this.Count_NUD.Size = new System.Drawing.Size(66, 20);
-            this.Count_NUD.TabIndex = 4;
+            this.Count_NUD.TabIndex = 1;
             this.Count_NUD.Value = new decimal(new int[] {
             2,
             0,
@@ -109,7 +109,7 @@
             this.Matr_DGV.Name = "Matr_DGV";
             this.Matr_DGV.RowHeadersVisible = false;
             this.Matr_DGV.Size = new System.Drawing.Size(408, 350);
-            this.Matr_DGV.TabIndex = 5;
+            this.Matr_DGV.TabIndex = 3;
             // 
             // Dialog_F
             // 
