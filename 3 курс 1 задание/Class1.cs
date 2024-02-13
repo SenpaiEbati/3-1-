@@ -17,7 +17,9 @@ namespace _3_курс_1_задание
         {
             _ID = ++_LastID; // ID
             _Matr = Count > 1 ? new double[Count, Count] : new double[2, 2]; // Квадратная Матрица создается с условием что если больше 1,
-                                                                             // то есть от 2 и далее, то Матрица 'Count'x'Count', а если 1 и менее , то Матрица 2x2
+            for (int i = 0; i < _Matr.GetLength(0); i++)
+                for (int j = 0; j < _Matr.GetLength(0); j++)
+                    _Matr[j, i] = 1;                                    // то есть от 2 и далее, то Матрица 'Count'x'Count', а если 1 и менее , то Матрица 2x2
         }
 
         public Storage() : this(2) { } // Конструктор без параметров
@@ -40,15 +42,20 @@ namespace _3_курс_1_задание
         {
             get
             {
-                if ((Index_i >= 0 && Index_i < _Matr.GetLength(0)) && (Index_j >= 0 && Index_j < _Matr.GetLength(1)))
+                if ((Index_i >= 2 && Index_i < _Matr.GetLength(0)) && (Index_j >= 2 && Index_j < _Matr.GetLength(1)))
                     return _Matr[Index_i, Index_j];
                 else
                     throw new Exception("Неправильно задан/-ы индекс/-а матрицы: " + Index_i + " " + Index_j);
             }
             set 
             {
-                if ((Index_i >= 0 && Index_i < _Matr.GetLength(0)) && (Index_j >= 0 && Index_j < _Matr.GetLength(1)))
-                    _Matr[Index_i, Index_j] = value;
+                if ((Index_i >= 2 && Index_i < _Matr.GetLength(0)) && (Index_j >= 2 && Index_j < _Matr.GetLength(1)))
+                    if (value > 0)
+                        _Matr[Index_i, Index_j] = value;
+                    else
+                        throw new Exception("Неправильное значение элемента " +
+                                    "[" + (Index_i + 1) + "," + (Index_j + 1) + "] матрицы. " +
+                                    "Элементы матрицы должны быть больше 0");
                 else
                     throw new Exception("Неправильно задан/-ы индекс/-а матрицы: " + Index_i + " " + Index_j);
             }
