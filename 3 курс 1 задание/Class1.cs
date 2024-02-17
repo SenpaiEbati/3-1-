@@ -42,16 +42,18 @@ namespace _3_курс_1_задание
         {
             get
             {
-                if ((Index_i >= 2 && Index_i < _Matr.GetLength(0)) && (Index_j >= 2 && Index_j < _Matr.GetLength(1)))
+                if ((Index_i >= 0 && Index_i < _Matr.GetLength(0)) && (Index_j >= 0 && Index_j < _Matr.GetLength(0)))
                     return _Matr[Index_i, Index_j];
                 else
                     throw new Exception("Неправильно задан/-ы индекс/-а матрицы: " + Index_i + " " + Index_j);
             }
             set 
             {
-                if ((Index_i >= 2 && Index_i < _Matr.GetLength(0)) && (Index_j >= 2 && Index_j < _Matr.GetLength(1)))
+                if ((Index_i >= 0 && Index_i < _Matr.GetLength(0)) && (Index_j >= 0 && Index_j < _Matr.GetLength(0)))
+                {
                     if (value > 0)
                         _Matr[Index_i, Index_j] = value;
+                }
                 else
                     throw new Exception("Неправильно задан/-ы индекс/-а матрицы: " + Index_i + " " + Index_j);
             }

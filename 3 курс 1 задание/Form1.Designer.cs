@@ -38,6 +38,7 @@
             this.MatrSum_TB = new System.Windows.Forms.TextBox();
             this.MatrSum_L = new System.Windows.Forms.Label();
             this.MatrSum_B = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ListMatr_LB
@@ -134,11 +135,22 @@
             this.MatrSum_B.UseVisualStyleBackColor = true;
             this.MatrSum_B.Click += new System.EventHandler(this.MatrSum_B_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(625, 163);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Main_F
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 294);
+            this.ClientSize = new System.Drawing.Size(761, 367);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.MatrSum_B);
             this.Controls.Add(this.MatrSum_L);
             this.Controls.Add(this.MatrSum_TB);
@@ -169,6 +181,7 @@
         private System.Windows.Forms.TextBox MatrSum_TB;
         private System.Windows.Forms.Label MatrSum_L;
         private System.Windows.Forms.Button MatrSum_B;
+        private System.Windows.Forms.Button button1;
     }
 }
 

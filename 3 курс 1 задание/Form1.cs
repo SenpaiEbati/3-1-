@@ -44,7 +44,7 @@ namespace _3_курс_1_задание
                     for (int j = 0; j < Dialog.Matr_DGV.ColumnCount; j++)
                         Temp[i, j] = Convert.ToDouble(Dialog.Matr_DGV[j, i].Value);
                 ListMatr_LB.Items.Add(Temp);
-
+                
                 SetEnabledButtons();
                 MatrSum_TB.Text = "";
             }
@@ -117,7 +117,8 @@ namespace _3_курс_1_задание
                     }
                     if (((sum_a - sum_b) < 0.00000000001) && (sum_a - sum_b) > -0.00000000001)
                     {
-                        if ((MatrSum_TB.Text.Length == 0) || (MatrSum_TB.Text == "Нет матриц удовлетворяющие условию")) {
+                        if (MatrSum_TB.Text.Length == 0)
+                        { 
                             MatrSum_TB.Text = "Матрица №" + Temp_i.ID + " " + sum_a;
                         }
                         else
@@ -138,6 +139,12 @@ namespace _3_курс_1_задание
         private void Main_F_Load(object sender, EventArgs e)
         {
             SetEnabledButtons();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Storage c = new Storage(3);
+            c[1, 2] = -5;
         }
     }
 }
